@@ -1,0 +1,25 @@
+body {
+    overflow: hidden;
+    margin: 0;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+.titles {
+    font-size: 14px;
+}
+
+.explanation {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+}
+
+#chart {
+    text-align: center;
+}
+
+.dependencyWheel {
+    font: 12px sans-serif;
+}
