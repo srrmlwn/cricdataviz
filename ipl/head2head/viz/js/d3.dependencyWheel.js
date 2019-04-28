@@ -1,6 +1,6 @@
 // global configs
 var animate = true;
-var animIntervalSecs = 1500;
+var animationSpeedSecs = 500;
 var arcPadding = 0.01;
 var margin = {top: 30, right: 25, bottom: 20, left: 25},
     width = 650 - margin.left - margin.right,
@@ -113,7 +113,7 @@ d3.chart.dependencyWheel = function (options) {
     function launchAnimations(svg, matches) {
         var allMatches = data.allMatches;
 
-        function fade(i) {
+        function fadeIn(i) {
             var match = allMatches[i];
             svg.selectAll(".chord")
                 .filter(function (d) {
@@ -138,10 +138,9 @@ d3.chart.dependencyWheel = function (options) {
         (function animate(i) {
             setTimeout(function () {
                 console.log(allMatches[i]);
-                fade(i);
-                i++;
-                if (i < allMatches.length) animate(i);
-            }, animIntervalSecs)
+                fadeIn(i);
+                if (i++ < allMatches.length) animate(i);
+            }, animationSpeedSecs)
         })(0);
     }
 
